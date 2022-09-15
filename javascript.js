@@ -1,8 +1,7 @@
-console.log("hello! Ahmed")
+console.log("Rock Paper Scissors")
 
 let getComputerChoice = function (){
   let randomNumber = Math.floor(Math.random() * 3);
-  console.log(randomNumber);
   switch (randomNumber){
     case 0:
       return "rock";
@@ -15,8 +14,7 @@ let getComputerChoice = function (){
 
 function playRound(playerSelection, computerSelection){
   playerSelection = playerSelection.toLowerCase();
-  console.log(computerSelection);
-
+  console.log(`Computer: ${computerSelection}`);
   if(computerSelection === playerSelection)
     return "Even";
   else {
@@ -41,28 +39,14 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
-// let getPlayerChoice = prompt("Choose 'Rock', 'Paper', 'Scissors'. ")
-// console.log(playRound("rock", getComputerChoice()));
 
 function game() {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 2; i++) {
     let getPlayerChoice = prompt("Choose 'Rock', 'Paper', 'Scissors'. ");
-    console.log(`Plyer selection: ${getPlayerChoice}`);
-    // console.log(`Computer selection: ${}`);
+    console.log(`Plyer: ${getPlayerChoice}`);
     console.log(playRound(getPlayerChoice, getComputerChoice()));
   }
-
 }
 
 game();
 
-// let demo = document.getElementById("demo");
-// let para = document.getElementById("para");
-// let choice = "ahmed";
-// demo.addEventListener("click", ()=>{
-//   demo.style.color = "red";
-//   choice = "rock";
-//   para.innerHTML = choice
-// })
-// console.log(choice);
-// para.innerHTML = choice;

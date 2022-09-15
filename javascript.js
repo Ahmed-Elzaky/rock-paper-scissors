@@ -41,7 +41,7 @@ function playRound(playerSelection, computerSelection){
 
 
 function game() {
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 5; i++) {
     let getPlayerChoice = prompt("Choose 'Rock', 'Paper', 'Scissors'. ");
     console.log(`Plyer: ${getPlayerChoice}`);
     console.log(playRound(getPlayerChoice, getComputerChoice()));

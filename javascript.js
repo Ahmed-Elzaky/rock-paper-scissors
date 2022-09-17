@@ -48,13 +48,13 @@ function game() {
 // game();
 
 const para = document.querySelector("p");
-const input = document.querySelector("input");
+const select = document.querySelector("select");
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-  const getPlayerChoice = input.value.toLowerCase();
-  input.value = "";
-  input.focus();
+  const getPlayerChoice = select.value.toLowerCase();
+  select.value = "";
+  select.focus();
   para.textContent = "";
   if (
     getPlayerChoice === "rock" ||

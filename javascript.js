@@ -1,4 +1,3 @@
-console.log("Rock Paper Scissors");
 
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3);
@@ -37,34 +36,50 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  for (let i = 0; i < 5; i++) {
-    let getPlayerChoice = prompt("Choose 'Rock', 'Paper', 'Scissors'. ");
-    console.log(`Plyer: ${getPlayerChoice}`);
-    console.log(playRound(getPlayerChoice, getComputerChoice()));
-  }
-}
+// function game() {
+//   for (let i = 0; i < 5; i++) {
+//     let getPlayerChoice = prompt("Choose 'Rock', 'Paper', 'Scissors'. ");
+//     console.log(`Plyer: ${getPlayerChoice}`);
+//     console.log(playRound(getPlayerChoice, getComputerChoice()));
+//   }
+// }
 
 // game();
 
-const para = document.querySelector("p");
-const select = document.querySelector("select");
-const btn = document.querySelector("button");
+const para = document.querySelector("#result");
+// const select = document.querySelector("select");
+// const btn = document.querySelector("button");
 
-btn.addEventListener("click", () => {
-  const getPlayerChoice = select.value.toLowerCase();
-  select.value = "";
-  select.focus();
-  para.textContent = "";
-  if (
-    getPlayerChoice === "rock" ||
-    getPlayerChoice === "paper" ||
-    getPlayerChoice === "scissors"
-  ) {
-    // let getComputerChoice = getComputerChoice();
-    // para.textContent =
-    para.textContent = playRound(getPlayerChoice, getComputerChoice());
-  } else {
-    para.textContent = "Wrong choice";
-  }
+// btn.addEventListener("click", () => {
+//   const getPlayerChoice = select.value.toLowerCase();
+//   select.value = "";
+//   select.focus();
+//   para.textContent = "";
+//   if (
+//     getPlayerChoice === "rock" ||
+//     getPlayerChoice === "paper" ||
+//     getPlayerChoice === "scissors"
+//   ) {
+//     // let getComputerChoice = getComputerChoice();
+//     // para.textContent =
+//     para.textContent = playRound(getPlayerChoice, getComputerChoice());
+//   } else {
+//     para.textContent = "Wrong choice";
+//   }
+// });
+
+
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+rock.addEventListener('click', event => {
+  para.textContent = playRound("rock", getComputerChoice());
 });
+paper.addEventListener('click', event => {
+  para.textContent = playRound("paper", getComputerChoice());
+});
+scissors.addEventListener("click", () => {
+  para.textContent = playRound("scissors", getComputerChoice());
+});
+

@@ -13,7 +13,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
-  if (computerSelection === playerSelection) return "Even";
+  if (computerSelection === playerSelection) return "Even!";
   else {
     if (computerSelection === "rock") {
       if (playerSelection === "paper")
@@ -44,11 +44,24 @@ const scissors = document.querySelector("#scissors");
 
 rock.addEventListener('click', event => {
   para.textContent = playRound("rock", getComputerChoice());
+  para.style.color = flag(para);
 });
 paper.addEventListener('click', event => {
   para.textContent = playRound("paper", getComputerChoice());
+  para.style.color = flag(para);
 });
 scissors.addEventListener("click", () => {
   para.textContent = playRound("scissors", getComputerChoice());
+  para.style.color = flag(para);
 });
 
+
+function flag(para) {
+  if (para.textContent.split('!')[0] === "You Lose")
+    return "red";
+  else if (para.textContent.split('!')[0] === "You Wine")
+    return "rgb(15, 219, 131)";
+  else
+    return "rgb(15, 141, 219)";
+
+}

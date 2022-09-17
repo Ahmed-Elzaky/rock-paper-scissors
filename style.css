@@ -1,14 +1,13 @@
 body {
   background-color: rgb(59, 58, 58);
   color: white;
-  font-family: 'Courier New', Courier, monospace;
-  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  /* margin: 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 10px;
-  
 }
 
 h1 {
@@ -21,8 +20,7 @@ h2 {
 #result {
   width: auto;
   font-size: 20px;
-  color: rgb(15, 219, 131);
-
+  /* color: rgb(15, 219, 131); */
 }
 
 img {
@@ -37,8 +35,6 @@ img:active {
   border: 3px solid sandybrown;
   text-decoration: sandybrown;
 }
-
-
 
 div {
   width: 250px;

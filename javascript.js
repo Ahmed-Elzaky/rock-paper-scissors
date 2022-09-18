@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
       if (playerSelection === "rock")
         return "You Wine! Rock beats Scissors";
       else if (playerSelection === "paper")
-        return "You Wine! Scissors beats Paper";
+        return "You Lose! Scissors beats Paper";
     }
   }
 }
@@ -63,5 +63,4 @@ function flag(para) {
     return "rgb(15, 219, 131)";
   else
     return "rgb(15, 141, 219)";
-
 }
